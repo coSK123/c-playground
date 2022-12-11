@@ -52,7 +52,8 @@ man einfache Anführungszeichen im Text verwenden, was besonders in der englisch
 
 
 void floater(int n){
-    float *ptr = malloc(n*sizeof(float));
+    float *ptr;
+    ptr = malloc(n*sizeof(float));
     if(ptr){
     for(int i = 0;i<n;i++){
         ptr=ptr+i*sizeof(float);
