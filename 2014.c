@@ -59,8 +59,12 @@ void floater(int n){
         *ptr = (float) 2*(i+1);
         printf("%f\n", *ptr);
     }
+     free(ptr);
     }
-    else free(ptr);
+    else 
+        printf("could not allocate");
+    
+    
 }
 /* Das Programm erhält Zugriff auf den Speicher über malloc und die dem Pointer zugewiesene Adresse
  Wenn der Speicher nicht mehr benötigt wird sollte dieser wieder freigegeben werden über free(ptr); 
@@ -90,7 +94,7 @@ int main(){
     printf("%d\n",a);
 
     floater(3);
-    
+
     return 0;
     
 }
